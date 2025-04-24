@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,7 @@ public class Unit : MonoBehaviour
 {
     //info
     public string Name;
-    public int Element; //1=Fire,2=Water,3=Wild,4=Dard,5=Light
     //level
-    public int Awaken;//0->2
-    public int Stars;//1->6
     public int Level;
     public int Exp;
     public int MaxExp;
@@ -28,9 +26,13 @@ public class Unit : MonoBehaviour
     //TODO: runes
 
     //status battle
+    public Skill currentSkill;
     public int CurrentHP;
     public int SpeedBar;
     public bool IsAlive => CurrentHP > 0;
+
+    public GameObject selected;
+    public GameObject targeted;
 
     //attack
     public void AttackSingleTarget(Unit target)
@@ -48,10 +50,33 @@ public class Unit : MonoBehaviour
     public IEnumerator TakeDamage(int damage)
     {
         CurrentHP -= damage;
+        transform.DOShakePosition(0.2f);
         yield return new WaitForSeconds(.5f);//anim hurt
         if(CurrentHP < 0)
         {
             gameObject.SetActive(false);
         }
+    }
+
+    public void OnTurn()
+    {
+        selected.SetActive(true);
+        Skills[0].Select();
+        Battle.Instance.skillView.Init(Skills);
+    }
+
+    public void EndTurn()
+    {
+        selected.SetActive(false);
+    }
+
+    public void Targeted()
+    {
+        targeted.SetActive(true);
+    }
+
+    public void UnTargeted()
+    {
+        targeted.SetActive(false);
     }
 }

@@ -9,4 +9,6 @@ public abstract class Skill : ScriptableObject
     public int TurnCooldown;
 
     public abstract void Use();
+    public abstract void Select();
+    public abstract void Unselect();
 }

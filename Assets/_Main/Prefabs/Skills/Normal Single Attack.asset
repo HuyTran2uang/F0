@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Normal Attack
   Description: Normal attack a target
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 2d0e3c1c5349fe8469c058f4089dc489, type: 3}
   IsPassive: 0
   TurnCooldown: 0
-  Power: 0
+  Power: 100
