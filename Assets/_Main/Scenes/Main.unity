@@ -199,6 +199,7 @@ MonoBehaviour:
   - {fileID: 592145651}
   units: []
   skillView: {fileID: 1981362402}
+  isSelectOwnedTeam: 0
 --- !u!4 &65513953 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 591413009972384183, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
@@ -1013,6 +1014,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: Skills.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 51703aaa578371440bff44b43510407e, type: 2}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b9651da1ba4d0e47994a029687d637a, type: 2}
     - target: {fileID: 8237481570108596022, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
       propertyPath: m_Name
       value: Unit (2)
@@ -1090,6 +1103,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: Skills.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 51703aaa578371440bff44b43510407e, type: 2}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b9651da1ba4d0e47994a029687d637a, type: 2}
     - target: {fileID: 8237481570108596022, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
       propertyPath: m_Name
       value: Unit (3)
@@ -1167,6 +1192,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: Skills.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 51703aaa578371440bff44b43510407e, type: 2}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b9651da1ba4d0e47994a029687d637a, type: 2}
     - target: {fileID: 8237481570108596022, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
       propertyPath: m_Name
       value: Unit (1)
@@ -1458,6 +1495,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: Skills.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 51703aaa578371440bff44b43510407e, type: 2}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b9651da1ba4d0e47994a029687d637a, type: 2}
     - target: {fileID: 8237481570108596022, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
       propertyPath: m_Name
       value: Unit (4)
@@ -1612,6 +1661,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: Skills.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 51703aaa578371440bff44b43510407e, type: 2}
+    - target: {fileID: 4545397665046153251, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
+      propertyPath: 'Skills.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b9651da1ba4d0e47994a029687d637a, type: 2}
     - target: {fileID: 8237481570108596022, guid: db1c4bec55f50184b94e6ee2b7cac103, type: 3}
       propertyPath: m_Name
       value: Unit

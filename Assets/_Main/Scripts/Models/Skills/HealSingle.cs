@@ -1,30 +1,30 @@
-using System.Linq;
 using UnityEngine;
-using System.Collections.Generic;
 
-[CreateAssetMenu(fileName = "Attack All", menuName = "Skills/Attack/Attack All")]
-public class AttackAll : Skill
+[CreateAssetMenu(fileName = "HealSingle", menuName = "Skills/Buff/HealSingle")]
+public class HealSingle : Skill
 {
     public int Power;
 
     public override void Select()
     {
         Battle.Instance.attacker.ChangeSkill(this);
+        Battle.Instance.targetCount = 1;
+        Battle.Instance.SelectOwnedTeam();
         Battle.Instance.isSelectOwnedTeam = true;
-        Battle.Instance.SelectAllEnemy();
     }
 
     public override void Unselect()
     {
-        Battle.Instance.targets = new List<Unit>();
+        Battle.Instance.targetSelected = null;
+        Battle.Instance.targetCount = 0;
     }
 
     public override void Use()
     {
         Helpers.StartCouroutine(
-            Helpers.OnAttackAll(
+            Helpers.OnHealSingle(
                 attacker: Battle.Instance.attacker,
-                targets: Battle.Instance.targets,
+                target: Battle.Instance.targetSelected,
                 skill: this
             )
         );

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class Helpers
@@ -27,14 +28,23 @@ public static class Helpers
         yield return new WaitForSeconds(.5f);//anim attack -> idle
     }
 
-    public static IEnumerator OnAttackAll(Unit attacker, Unit[] targets, AttackAll skill)
+    public static IEnumerator OnAttackAll(Unit attacker, List<Unit> targets, AttackAll skill)
     {
         yield return new WaitForSeconds(.5f);//anim idle -> attack
         int damage = (int)(attacker.Atk * skill.Power / 100f);
-        for (int i = 0; i < targets.Length; i++)
+        for (int i = 0; i < targets.Count; i++)
         {
             Helpers.StartCouroutine(targets[i].TakeDamage(damage));
         }
         yield return new WaitForSeconds(.5f);//anim attack -> idle
+    }
+
+    public static IEnumerator OnHealSingle(Unit attacker, Unit target, HealSingle skill)
+    {
+        attacker.transform.DOMove(target.transform.position, .5f);
+        yield return new WaitForSeconds(.5f);//anim
+        int hp = (int)(attacker.Atk * skill.Power / 100f);
+        yield return Helpers.StartCouroutine(target.Healing(hp));
+        yield return new WaitForSeconds(.5f);//anim
     }
 }

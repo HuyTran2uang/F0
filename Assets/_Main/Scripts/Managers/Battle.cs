@@ -7,16 +7,18 @@ public class Battle : Singleton<Battle>
 {
     public Unit attacker;
     public Unit targetSelected;
-    public Unit[] targets;
+    public List<Unit> targets;
 
     public int targetCount;
 
-    public Unit[] ownedTeam;
-    public Unit[] enemyTeam;
+    public List<Unit> ownedTeam;
+    public List<Unit> enemyTeam;
 
     public List<Unit> units;
 
     public SkillView skillView;
+
+    public bool isSelectOwnedTeam;
 
     public void SelectAllEnemy()
     {
@@ -34,6 +36,11 @@ public class Battle : Singleton<Battle>
         targetSelected.Targeted();
     }
 
+    public void SelectOwnedTeam()
+    {
+        targetSelected = ownedTeam.FirstOrDefault();
+    }
+
     private void Start()
     {
         StartBattle();
@@ -47,11 +54,23 @@ public class Battle : Singleton<Battle>
             if (Physics.Raycast(ray, out var hit))
             {
                 var unit = hit.collider.GetComponent<Unit>();
-                if(enemyTeam.Contains(unit))
+                if (isSelectOwnedTeam)
                 {
-                    targetSelected.UnTargeted();
-                    targetSelected = unit;
-                    targetSelected.Targeted();
+                    if (ownedTeam.Contains(unit))
+                    {
+                        targetSelected.UnTargeted();
+                        targetSelected = unit;
+                        targetSelected.Targeted();
+                    }
+                }
+                else
+                {
+                    if (enemyTeam.Contains(unit))
+                    {
+                        targetSelected.UnTargeted();
+                        targetSelected = unit;
+                        targetSelected.Targeted();
+                    }
                 }
             }
         }

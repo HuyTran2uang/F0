@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5ff5baede10ee4583011652073ba9b, type: 3}
-  m_Name: Normal Single Attack
+  m_Script: {fileID: 11500000, guid: 253cca1b257a7a241950bc1980829021, type: 3}
+  m_Name: Attack All
   m_EditorClassIdentifier: 
-  Name: Normal Attack
-  Description: Normal attack a target
-  Icon: {fileID: 21300000, guid: b502713d485fa4440abadebede6b054f, type: 3}
+  Name: Attack All
+  Description: Attack All
+  Icon: {fileID: 21300000, guid: 2d0e3c1c5349fe8469c058f4089dc489, type: 3}
   IsPassive: 0
   TurnCooldown: 0
-  Power: 100
+  Power: 50
